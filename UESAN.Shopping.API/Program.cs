@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using UESAN.Shopping.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var _config = builder.Configuration;
+var connectionString = _config
+                .GetConnectionString("DevConnection");
+builder
+       .Services
+       .AddDbContext<StoreDbContext>
+       (options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
