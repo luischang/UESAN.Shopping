@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UESAN.Shopping.Core", "UESA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UESAN.Shopping.Infrastructure", "UESAN.Shopping.Infrastructure\UESAN.Shopping.Infrastructure.csproj", "{325586CE-5AB3-4215-BE6B-32F38FEDF8D7}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UESAN.Shopping.Database", "UESAN.Shopping.Database\UESAN.Shopping.Database.sqlproj", "{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{325586CE-5AB3-4215-BE6B-32F38FEDF8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325586CE-5AB3-4215-BE6B-32F38FEDF8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{325586CE-5AB3-4215-BE6B-32F38FEDF8D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7246DAE7-42EC-4F7F-BE9A-5EC15BE73C8D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
