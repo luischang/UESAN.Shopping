@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UESAN.Shopping.Core.Interfaces;
+using UESAN.Shopping.Core.Services;
 using UESAN.Shopping.Infrastructure.Data;
 using UESAN.Shopping.Infrastructure.Repositories;
 
@@ -14,6 +15,7 @@ builder
        .AddDbContext<StoreDbContext>
        (options => options.UseSqlServer(connectionString));
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
