@@ -12,10 +12,12 @@ namespace UESAN.Shopping.Core.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IJWTFactory _jwtFactory;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IJWTFactory jwtFactory)
         {
             _userRepository = userRepository;
+            _jwtFactory = jwtFactory;
         }
 
         public async Task<UserAuthResponseDTO> Validate(string email, string password)
@@ -24,8 +26,7 @@ namespace UESAN.Shopping.Core.Services
             if (user == null)
                 return null;
 
-            //TODO: Generar Token
-            var token = "";
+            var token = _jwtFactory.GenerateJWToken(user);
 
             var userDTO = new UserAuthResponseDTO()
             {
