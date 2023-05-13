@@ -24,6 +24,9 @@ builder.Services.AddTransient<IFavoriteRepository, FavoriteRepository>();
 builder.Services.AddTransient<IFavoriteService, FavoriteService>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<IOrdersRepository, OrdersRepository>();
+builder.Services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
+builder.Services.AddTransient<IOrdersService, OrdersService>();
 builder.Services.AddSharedInfrastructure(_config);
 
 builder.Services.AddControllers();
