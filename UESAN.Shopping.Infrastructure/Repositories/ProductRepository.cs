@@ -21,15 +21,19 @@ namespace UESAN.Shopping.Infrastructure.Repositories
 
         public async Task<IEnumerable<Product>> GetAll()
         {
-            return await _dbContext.Product.ToListAsync();
+            return await _dbContext
+                           .Product
+                           .Where(x => x.IsActive == true)
+                           .Include(z => z.Category)
+                           .ToListAsync();
         }
 
         public async Task<Product> GetById(int id)
         {
-            return await _dbContext
-                .Product
-                .Where(x => x.Id == id)
-                .FirstOrDefaultAsync();
+            return await _dbContext.Product
+                    .Where(x => x.Id == id && x.IsActive == true)
+                    .Include(z => z.Category)
+                    .FirstOrDefaultAsync();
         }
         public async Task<bool> Insert(Product product)
         {
