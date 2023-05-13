@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UESAN.Shopping.Core.DTOs;
 using UESAN.Shopping.Core.Entities;
@@ -8,6 +9,7 @@ namespace UESAN.Shopping.API.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         //private readonly ICategoryRepository _categoryRepository;
