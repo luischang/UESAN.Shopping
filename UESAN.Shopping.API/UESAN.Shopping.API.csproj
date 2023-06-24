@@ -15,4 +15,8 @@
     <ProjectReference Include="..\UESAN.Shopping.Infrastructure\UESAN.Shopping.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="files\" />
+  </ItemGroup>
+
 </Project>
